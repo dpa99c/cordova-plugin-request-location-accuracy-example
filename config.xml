@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget
+        id="uk.co.workingedge.phonegap.plugins.example.requestlocationaccuracy"
+        version="0.0.1"
+        xmlns="http://www.w3.org/ns/widgets"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Request Location Accuracy example</name>
+    <description>
+        An example app that demonstrates use of cordova-plugin-request-location-accuracy on Android
+    </description>
+    <author email="dave@workingedge.co.uk" href="http://www.workingedge.co.uk/dave">
+        Dave Alden
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+
+    <preference name="Fullscreen" value="false" />
+
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <plugin name="cordova.plugins.diagnostic" version="2" />
+
+    <plugin name="cordova-plugin-request-location-accuracy" version="1" />
+
+    <platform name="android">
+        <preference name="android-minSdkVersion" value="14" />
+    </platform>
+</widget>
