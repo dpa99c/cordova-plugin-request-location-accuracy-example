@@ -25,7 +25,7 @@ function onDeviceReady() {
     $('#request-accuracy').on("click", function(){
         var accuracy = $('#location-accuracy').val(),
             accuracyName  =  $('#location-accuracy option:selected').text();
-        cordova.plugin.locationAccuracy.request(onRequestSuccess.bind(this, accuracyName), onRequestFailure, cordova.plugin.locationAccuracy.REQUEST_PRIORITY_HIGH_ACCURACY);
+        cordova.plugins.locationAccuracy.request(onRequestSuccess.bind(this, accuracyName), onRequestFailure, cordova.plugins.locationAccuracy.REQUEST_PRIORITY_HIGH_ACCURACY);
     });
 
     checkState();
