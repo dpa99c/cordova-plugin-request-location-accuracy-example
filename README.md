@@ -9,6 +9,9 @@ This repo contains an example project which illustrates use of the [Cordova Requ
 * [Building and running](#building-and-running)
 * [Pre-built app](#pre-built-app)
 * [License](#license)
+
+
+[![Example app demo](https://j.gifs.com/KRL8Mb.gif)](https://www.youtube.com/watch?v=pbNdnMDRstg)
  
 # Downloading
 
