@@ -7,7 +7,7 @@
         xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Request Location Accuracy example</name>
     <description>
-        An example app that demonstrates use of cordova-plugin-request-location-accuracy on Android
+        An example app that demonstrates use of cordova-plugin-request-location-accuracy
     </description>
     <author email="dave@workingedge.co.uk" href="http://www.workingedge.co.uk/dave">
         Dave Alden
@@ -18,11 +18,13 @@
     <preference name="Fullscreen" value="false" />
 
     <plugin name="cordova-plugin-whitelist" version="1" />
-    <plugin name="cordova.plugins.diagnostic" version="2" />
+    <plugin name="cordova.plugins.diagnostic" version="3" />
 
     <plugin name="cordova-plugin-request-location-accuracy" version="1" />
 
     <platform name="android">
         <preference name="android-minSdkVersion" value="14" />
     </platform>
+
+    <platform name="ios"></platform>
 </widget>
