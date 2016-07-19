@@ -1,7 +1,7 @@
 Cordova Request Location Accuracy Plugin Example
 ================================================
 
-This repo contains an example project which illustrates use of the [Cordova Request Location Accuracy Plugin for Android](https://github.com/dpa99c/cordova-plugin-request-location-accuracy).
+This repo contains an example project which illustrates use of the [Cordova Request Location Accuracy Plugin](https://github.com/dpa99c/cordova-plugin-request-location-accuracy) for Android and iOS.
 
 
 ## Contents
@@ -21,12 +21,22 @@ To download the example project, clone it using git:
 
 # Building and running
 
-The plugin is specific to the Android platform; to run the example app, connect an Android device and execute the following commands from the project root:
+**IMPORTANT:** Note that this plugin is intended for use in a **native** Android or iOS environment.
+It will **NOT** work in a browser-emulated Cordova environment, for example by running `cordova serve` or using the [Ripple emulator](https://github.com/ripple-emulator/ripple).
 
-- Install the platform into the project: `$ cordova platform add android`
-- Build and run the project: `$ cordova run`
+To run the example app, connect a Android/iOS device and execute the following commands from the project root.
 
-# Pre-built app
+- Install the platform into the project:
+
+    `$ cordova platform add android`
+    `$ cordova platform add ios`
+
+- Build and run the project:
+
+    `$ cordova run android`
+    `$ cordova run ios`
+
+# Pre-built Android app
 If you're unable to build the project or just want to try it out, [here is the app as a pre-built Android APK installer](build/cordova-plugin-request-location-accuracy-example.apk)
 
 
@@ -35,7 +45,7 @@ If you're unable to build the project or just want to try it out, [here is the a
 
 The MIT License
 
-Copyright (c) 2015 Working Edge Ltd.
+Copyright (c) 2016 Dave Alden (Working Edge Ltd.)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
