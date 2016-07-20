@@ -7,11 +7,14 @@ This repo contains an example project which illustrates use of the [Cordova Requ
 ## Contents
 * [Downloading](#downloading)
 * [Building and running](#building-and-running)
-* [Pre-built app](#pre-built-app)
+* [Pre-built Android app](#pre-built-android-app)
 * [License](#license)
 
-
+**Android:**
 [![Example app demo](https://j.gifs.com/KRL8Mb.gif)](https://www.youtube.com/watch?v=pbNdnMDRstg)
+
+**iOS:**
+[![Example iOS app screencapture](https://j.gifs.com/1woNPj.gif)](https://www.youtube.com/watch?v=PBZKH7u5RlQ)
  
 # Downloading
 
