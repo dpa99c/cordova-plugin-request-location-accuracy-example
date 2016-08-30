@@ -38,6 +38,15 @@ function onDeviceReady() {
 
     function checkState() {
         console.log("Checking location state...");
+
+        cordova.plugins.locationAccuracy.canRequest(function(canRequest){
+            if(canRequest){
+                $('#request-location').removeAttr('disabled');
+            }else{
+                $('#request-location').attr('disabled', 'disabled');
+            }
+        });
+
         cordova.plugins.diagnostic.isLocationAvailable(function (available) {
             $('#location-available').text(available ? "AVAILABLE" : "UNAVAILABLE");
         }, onError);
@@ -47,10 +56,8 @@ function onDeviceReady() {
                 cordova.plugins.diagnostic.isLocationAuthorized(function (authorized) {
                     $('#location-authorized').text(authorized ? "AUTHORIZED" : "UNAUTHORIZED");
                 }, onError);
-                $('#request-location').attr('disabled', 'disabled');
             }else{
                 $('#location-authorized').text("UNKNOWN");
-                $('#request-location').removeAttr('disabled');
             }
         }, onError);
 
