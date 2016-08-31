@@ -20,7 +20,7 @@
     <plugin name="cordova-plugin-whitelist" version="1" />
     <plugin name="cordova.plugins.diagnostic" version="3" />
 
-    <plugin name="cordova-plugin-request-location-accuracy" version="2.1.0" />
+    <plugin name="cordova-plugin-request-location-accuracy" version="2.1" />
 
     <platform name="android">
         <preference name="android-minSdkVersion" value="14" />
