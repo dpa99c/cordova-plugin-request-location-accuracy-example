@@ -1,10 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget
-        id="uk.co.workingedge.phonegap.plugins.example.requestlocationaccuracy"
-        version="2.1.0"
-        xmlns="http://www.w3.org/ns/widgets"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="uk.co.workingedge.phonegap.plugins.example.requestlocationaccuracy" version="2.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Request Location Accuracy example</name>
     <description>
         An example app that demonstrates use of cordova-plugin-request-location-accuracy
@@ -14,17 +9,20 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-
     <preference name="Fullscreen" value="false" />
-
-    <plugin name="cordova-plugin-whitelist" version="1" />
-    <plugin name="cordova.plugins.diagnostic" version="3" />
-
-    <plugin name="cordova-plugin-request-location-accuracy" version="2.1" />
-
     <platform name="android">
         <preference name="android-minSdkVersion" value="14" />
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-feature android:name="android.hardware.location.gps" />
+        </config-file>
     </platform>
-
-    <platform name="ios"></platform>
+    <platform name="ios" />
+    <engine name="android" spec="latest" />
+    <engine name="ios" spec="latest" />
+    <plugin name="cordova-custom-config" spec="^4.0.2" />
+    <plugin name="cordova-plugin-request-location-accuracy" spec="*" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova.plugins.diagnostic" spec="3" />
 </widget>
