@@ -1,25 +1,23 @@
 {
-    "name": "uk.co.workingedge.phonegap.plugins.example.requestlocationaccuracy",
-    "version": "2.1.0",
-    "displayName": "Request Location Accuracy example",
-    "cordova": {
-        "platforms": [
-            "android",
-            "ios"
-        ],
-        "plugins": {
-            "cordova-plugin-whitelist": {},
-            "cordova.plugins.diagnostic": {},
-            "cordova-plugin-request-location-accuracy": {},
-            "cordova-custom-config": {}
-        }
-    },
-    "dependencies": {
+  "name": "uk.co.workingedge.phonegap.plugins.example.requestlocationaccuracy",
+  "version": "2.1.0",
+  "displayName": "Request Location Accuracy example",
+  "cordova": {
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova.plugins.diagnostic": {},
+      "cordova-plugin-request-location-accuracy": {}
+    }
+  },
+  "dependencies": {
         "cordova-android": "latest",
-        "cordova-custom-config": "^4.0.2",
         "cordova-ios": "latest",
         "cordova-plugin-request-location-accuracy": "*",
-        "cordova-plugin-whitelist": "1",
-        "cordova.plugins.diagnostic": "3"
-    }
+        "cordova-plugin-whitelist": "*",
+        "cordova.plugins.diagnostic": "*"
+  }
 }

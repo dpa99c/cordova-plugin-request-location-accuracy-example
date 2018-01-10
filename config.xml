@@ -11,7 +11,6 @@
     <access origin="*" />
     <preference name="Fullscreen" value="false" />
     <platform name="android">
-        <preference name="android-minSdkVersion" value="14" />
         <config-file parent="/*" target="AndroidManifest.xml">
             <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
             <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -19,10 +18,9 @@
         </config-file>
     </platform>
     <platform name="ios" />
+    <plugin name="cordova-plugin-whitelist" spec="*" />
+    <plugin name="cordova-plugin-request-location-accuracy" spec="*" />
+    <plugin name="cordova.plugins.diagnostic" spec="*" />
     <engine name="android" spec="latest" />
     <engine name="ios" spec="latest" />
-    <plugin name="cordova-custom-config" spec="^4.0.2" />
-    <plugin name="cordova-plugin-request-location-accuracy" spec="*" />
-    <plugin name="cordova-plugin-whitelist" spec="1" />
-    <plugin name="cordova.plugins.diagnostic" spec="3" />
 </widget>
