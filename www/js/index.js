@@ -83,13 +83,7 @@ function _makeRequest(){
 }
 
 function requestLocationAccuracy(){
-    ensureLocationAuthorization(function(isAuthorized){
-        if(isAuthorized){
-
-        }else{
-
-        }
-    });
+    ensureLocationAuthorization();
 }
 
 
