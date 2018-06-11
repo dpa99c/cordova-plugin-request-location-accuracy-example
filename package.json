@@ -4,7 +4,8 @@
   "displayName": "Request Location Accuracy example",
   "cordova": {
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ],
     "plugins": {
       "cordova-plugin-whitelist": {},
@@ -16,6 +17,7 @@
     "cordova-ios": "latest",
     "cordova-plugin-request-location-accuracy": "*",
     "cordova-plugin-whitelist": "*",
-    "cordova.plugins.diagnostic": "*"
+    "cordova.plugins.diagnostic": "*",
+    "cordova-android": "latest"
   }
 }

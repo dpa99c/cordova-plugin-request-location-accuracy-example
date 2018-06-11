@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline'; img-src * 'self' data:; script-src * 'unsafe-inline' 'unsafe-eval'">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <style type="text/css">
+            body{
+                padding: 16px;
+                margin: 0;
+            }
+            body.ios .android,
+            body.android .ios{
+                display: none;
+            }
+
+            button[disabled]{
+                color: #ccc;
+            }
+
+            h2{
+                text-align: center;
+                margin-top: 0;
+                padding-top: 0;
+            }
+
+            button{
+                margin-bottom: 16px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h3>cordova-plugin-request-location-accuracy example</h3>
+        
+        <div class="android">
+            <p>Location Mode: <span id="location-mode"></span></p>
+        </div>
+        <div class="ios">
+            <p>To run through the test conditions, do the following:</p>
+            <ol>
+                <li>Open Settings > Privacy and turn off Location Services</li>
+                <li>Request Location to trigger the native dialog that allows you to open Location Settings directly</li>
+            </ol>
+
+            <p>Location available: <span id="location-available"></span></p>
+            <p>Location Services: <span id="location-enabled"></span></p>
+        </div>
+
+        <p>Location authorized: <span id="location-authorized"></span></p>
+
+        <div>
+            <button id="request-accuracy" onclick="requestLocationAccuracy()">Request Location Accuracy</button>
+        </div>
+
+        <div><button onclick="openSettings()">Open settings</button></div>
+    </body>
+</html>

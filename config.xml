@@ -21,6 +21,6 @@
     <plugin name="cordova-plugin-whitelist" spec="*" />
     <plugin name="cordova-plugin-request-location-accuracy" spec="*" />
     <plugin name="cordova.plugins.diagnostic" spec="*" />
-    <engine name="android" spec="latest" />
     <engine name="ios" spec="latest" />
+    <engine name="android" spec="latest" />
 </widget>
