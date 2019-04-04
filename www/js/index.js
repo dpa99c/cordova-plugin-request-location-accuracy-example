@@ -19,22 +19,21 @@ function openSettings(){
 }
 
 function handleLocationAuthorizationStatus(status) {
+    console.log("Location authorization status: "+ status);
     switch (status) {
         case cordova.plugins.diagnostic.permissionStatus.GRANTED:
             if(platform === "ios"){
                 onError("Location services is already switched ON");
-            }else{
-                _makeRequest();
             }
+            $('#request-authorization').attr('disabled', 'disabled');
+
             break;
         case cordova.plugins.diagnostic.permissionStatus.NOT_REQUESTED:
-            requestLocationAuthorization();
             break;
         case cordova.plugins.diagnostic.permissionStatus.DENIED:
             if(platform === "android"){
                 onError("User denied permission to use location");
-            }else{
-                _makeRequest();
+                $('#request-authorization').removeAttr('disabled');
             }
             break;
         case cordova.plugins.diagnostic.permissionStatus.DENIED_ALWAYS:
@@ -44,6 +43,7 @@ function handleLocationAuthorizationStatus(status) {
         case cordova.plugins.diagnostic.permissionStatus.GRANTED_WHEN_IN_USE:
             // iOS only
             onError("Location services is already switched ON");
+            $('#request-authorization').attr('disabled', 'disabled');
             break;
     }
 }
@@ -52,11 +52,7 @@ function requestLocationAuthorization() {
     cordova.plugins.diagnostic.requestLocationAuthorization(handleLocationAuthorizationStatus, onError);
 }
 
-function ensureLocationAuthorization() {
-    cordova.plugins.diagnostic.getLocationAuthorizationStatus(handleLocationAuthorizationStatus, onError);
-}
-
-function _makeRequest(){
+function requestLocationAccuracy(){
     cordova.plugins.locationAccuracy.canRequest(function(canRequest){
         if (canRequest) {
             cordova.plugins.locationAccuracy.request(function () {
@@ -80,10 +76,6 @@ function _makeRequest(){
             onError("Cannot request location accuracy");
         }
     });
-}
-
-function requestLocationAccuracy(){
-    ensureLocationAuthorization();
 }
 
 
@@ -113,6 +105,8 @@ function checkState(){
             $('#location-authorized').text("UNKNOWN");
         }
     }, onError);
+
+    cordova.plugins.diagnostic.getLocationAuthorizationStatus(handleLocationAuthorizationStatus, onError);
 
     if(platform === "android"){
         cordova.plugins.diagnostic.getLocationMode(function(mode){
